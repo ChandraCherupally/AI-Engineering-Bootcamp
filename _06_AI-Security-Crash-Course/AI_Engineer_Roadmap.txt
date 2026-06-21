@@ -1,0 +1,102 @@
+
+AI Engineer Roadmap (Priority Order)
+
+CURRENT STATUS
+- Python, SQL, Pandas, Automation/Scripting
+- SPSS
+- TensorFlow/Keras Fundamentals
+- CNNs, RNNs, Transformer Basics
+- LangChain (learning)
+- LangGraph (learning)
+- MCP (learning)
+- Ollama and Qwen3 local models
+
+PRIORITY 1 (Must Learn First)
+1. Advanced RAG
+   - Chunking Strategies
+   - Embeddings
+   - Vector Databases
+   - Hybrid Search
+   - Metadata Filtering
+   - Reranking
+   - Citations
+
+2. LangGraph
+   - StateGraph
+   - Nodes and Edges
+   - Conditional Routing
+   - Memory
+   - Human-in-the-loop
+   - Multi-Agent Workflows
+
+3. AI Agents
+   - Tool Calling
+   - ReAct Pattern
+   - Planning
+   - Reflection
+   - Agent Memory
+   - Deep Agents
+
+4. Vector Databases
+   - FAISS
+   - ChromaDB
+   - Pinecone
+   - Weaviate
+   - Milvus
+
+5. Hugging Face Ecosystem
+   - Transformers
+   - Sentence Transformers
+   - Model Hub
+   - Datasets
+   - Pipelines
+
+PRIORITY 2 (Learn Next)
+6. Transformers Internals
+7. Model Deployment (FastAPI, Docker, Streamlit, Gradio)
+8. Evaluation (LangSmith, Ragas)
+
+PRIORITY 3 (Important but Later)
+9. PEFT
+10. LoRA
+11. QLoRA
+12. Unsloth
+
+PRIORITY 4 (Advanced)
+13. Custom Inference Pipelines
+14. vLLM
+15. Multi-Agent Systems
+
+IGNORE FOR NOW
+- Training LLMs from scratch
+- CUDA Programming
+- Distributed Training
+- RLHF Research
+- Training 70B+ Models
+
+RECOMMENDED LEARNING ORDER
+1. Complete LangChain
+2. Complete LangGraph
+3. Build 3 RAG Projects
+4. Learn FAISS
+5. Learn ChromaDB
+6. Learn Hugging Face Models
+7. Learn Agent Workflows
+8. Build a Deep Agent Project
+9. Learn FastAPI
+10. Deploy a Project
+11. Learn LangSmith
+12. Learn RAG Evaluation
+13. Learn LoRA
+14. Learn PEFT
+15. Learn QLoRA
+16. Learn Unsloth
+17. Learn vLLM
+
+BIGGEST GAPS TODAY
+- Hugging Face Ecosystem
+- Vector Databases
+- FastAPI Deployment
+- Evaluation
+- LoRA / PEFT / QLoRA
+- Production Inference (vLLM)

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>LangGraph Tracker</title>
+<style>
+body {font-family: Arial, sans-serif; margin: 30px; background:#f5f7fa;}
+h1 {text-align:center;}
+.section {background:white; padding:15px; margin:15px 0; border-radius:10px;}
+.progress-container {width:100%; background:#ddd; border-radius:20px;}
+.progress-bar {height:25px; width:0%; background:#4CAF50; border-radius:20px; text-align:center; color:white;}
+label {display:block; margin:8px 0;}
+textarea {width:100%; height:120px;}
+</style>
+</head>
+<body>
+
+<h1>🚀 LangGraph Learning Tracker</h1>
+
+<div class="section">
+<h2>Overall Progress</h2>
+<div class="progress-container">
+<div class="progress-bar" id="progressBar">0%</div>
+</div>
+</div>
+
+<div class="section">
+<h2>Part 1: LangGraph Fundamentals</h2>
+<label><input type="checkbox" class="topic"> Build Basic Chatbot</label>
+<label><input type="checkbox" class="topic"> Single Tool</label>
+<label><input type="checkbox" class="topic"> Multiple Tools</label>
+<label><input type="checkbox" class="topic"> Memory</label>
+<label><input type="checkbox" class="topic"> Human in the Loop</label>
+<label><input type="checkbox" class="topic"> Streaming</label>
+<label><input type="checkbox" class="topic"> MCP from Scratch</label>
+</div>
+
+<div class="section">
+<h2>Part 2: Advanced LangGraph</h2>
+<label><input type="checkbox" class="topic"> Workflows</label>
+<label><input type="checkbox" class="topic"> Agents</label>
+<label><input type="checkbox" class="topic"> Multi-Agent Systems</label>
+<label><input type="checkbox" class="topic"> Functional API</label>
+<label><input type="checkbox" class="topic"> Debugging</label>
+<label><input type="checkbox" class="topic"> Monitoring</label>
+<label><input type="checkbox" class="topic"> LangSmith</label>
+<label><input type="checkbox" class="topic"> MLflow Evaluation</label>
+</div>
+
+<div class="section">
+<h2>Part 3: LangGraph Agents & Deployment</h2>
+<label><input type="checkbox" class="topic"> End-to-End Agent Project</label>
+<label><input type="checkbox" class="topic"> LLMOps Pipeline</label>
+<label><input type="checkbox" class="topic"> Deployment</label>
+<label><input type="checkbox" class="topic"> Hugging Face Spaces</label>
+<label><input type="checkbox" class="topic"> MLflow</label>
+<label><input type="checkbox" class="topic"> AWS Deployment</label>
+<label><input type="checkbox" class="topic"> Grafana Monitoring</label>
+<label><input type="checkbox" class="topic"> LLM Evaluation Metrics</label>
+</div>
+
+<div class="section">
+<h2>📝 Notes</h2>
+<textarea id="notes"></textarea>
+</div>
+
+<script>
+const checkboxes = document.querySelectorAll('.topic');
+const notes = document.getElementById('notes');
+
+checkboxes.forEach((cb, index) => {
+    cb.checked = localStorage.getItem('topic_' + index) === 'true';
+    cb.addEventListener('change', () => {
+        localStorage.setItem('topic_' + index, cb.checked);
+        updateProgress();
+    });
+});
+
+notes.value = localStorage.getItem('notes') || '';
+notes.addEventListener('input', () => {
+    localStorage.setItem('notes', notes.value);
+});
+
+function updateProgress() {
+    const total = checkboxes.length;
+    const checked = [...checkboxes].filter(cb => cb.checked).length;
+    const percent = Math.round((checked / total) * 100);
+    const bar = document.getElementById('progressBar');
+    bar.style.width = percent + '%';
+    bar.textContent = percent + '%';
+}
+
+updateProgress();
+</script>
+
+</body>
+</html>
